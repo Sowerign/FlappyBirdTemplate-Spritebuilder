@@ -9,11 +9,17 @@
     character = (Character*)[CCBReader load:@"Character"];
     [physicsNode addChild:character];
     [self addObstacle];
+    timesinceobstacle = 0.0f;
 }
 
 -(void)update:(CCTime)delta
 {
-    // put update code here
+    timesinceobstacle += delta;
+    if (timesinceobstacle >= 0.2)
+    {
+        [self addObstacle];
+        timesinceobstacle =0.0f;
+    }
 }
 
 -(void)touchBegan:(CCTouch *)touch withEvent:(CCTouchEvent *)event
