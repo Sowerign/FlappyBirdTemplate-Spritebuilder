@@ -15,7 +15,7 @@
 -(void)update:(CCTime)delta
 {
     timesinceobstacle += delta;
-    if (timesinceobstacle >= 0.2)
+    if (timesinceobstacle >= 2.0f)
     {
         [self addObstacle];
         timesinceobstacle =0.0f;
