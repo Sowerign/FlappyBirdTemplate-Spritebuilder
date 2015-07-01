@@ -27,10 +27,7 @@
     [character flap];
 }
 
--(void) dosomething
-{
-    NSLog(@"Hello World!");
-}
+
 
 
 @end
