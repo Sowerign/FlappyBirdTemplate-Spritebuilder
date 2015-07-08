@@ -35,9 +35,9 @@
     }
     
     // loop the clouds
-    for (CCNode *cloud in _clouds) {
+    for (CCNode *cloud in clouds) {
         // get the world position of the cloud
-        CGPoint cloudWorldPosition = [_parallaxBackground convertToWorldSpace:cloud.position];
+        CGPoint cloudWorldPosition = [_parallaxContainer convertToWorldSpace:cloud.position];
         // get the screen position of the cloud
         CGPoint cloudScreenPosition = [self convertToNodeSpace:cloudWorldPosition];
         
